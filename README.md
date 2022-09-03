@@ -1,2 +1,4 @@
 # portfolio
-programming codes make by me
+
+in my learning so far
+all my codes
