@@ -10,18 +10,19 @@ public class FiltraArray {
 		
 		Random random = new Random();
 		
-		int listaX[] = new int[1000];
+		int listaX[] = new int[100];
 		listaX[0] = 1;
-		for (int i=1; i<1000; i++)  {
+		for (int i=1; i<100; i++)  {
 		
 			listaX[i] = listaX[i-1] + random.nextInt(10) + 1;
 		}
 		
-		int valor = listaX[random.nextInt(999)];
+		int valor = listaX[random.nextInt(99)];
 		int resultado = -1;
 		int comeco = 0;
-		int fim = 1000;
+		int fim = 100;
 		int contagem = 0;
+		System.out.println("Valor selecionado de algum espaço aleatório na ListaX: "+valor);
 		
 		while (resultado == -1) {
 			contagem++;
@@ -40,9 +41,12 @@ public class FiltraArray {
 			}
 			
 		}
-		
-		System.out.println(resultado);
-		System.out.println(contagem);
+		System.out.println("Espaço que contém o valor gerado: listaX["+resultado+"]");
+		System.out.println("Número de contagens: "+contagem);
+		int cima = resultado+1;
+		int baixo = resultado-1;
+		System.out.println("Valor de cima (listaX["+cima+"]) "+listaX[resultado+1]);
+		System.out.println("Valor de baixo (listaX["+baixo+"]) " +listaX[resultado-1]);
 	}
 
 }
